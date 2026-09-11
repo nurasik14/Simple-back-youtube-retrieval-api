@@ -1,3 +1,0 @@
-[submodule "third-party-api"]
-	path = third-party-api
-	url = https://github.com/gabrielbaute/spotify-saver.git
