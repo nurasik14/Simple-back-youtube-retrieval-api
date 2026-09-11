@@ -1,6 +1,10 @@
 # Warning
 
-This project is deprecated and should not be used for bundling spicetify extensions or custom apps. Please use [`esbuild`](https://esbuild.github.io/), [`Bun's bundler`](https://bun.com/docs/bundler), [`Rollup`](https://rollupjs.org/) or [`webpack`](https://webpack.js.org/)/[`rspack`](https://rspack.rs/) with your own config. This project won't be receiving any more updates until further notice.
+This project is still in early development.
+
+# Setup + npm scripts
+
+
 
 # Spicetify Creator
 
