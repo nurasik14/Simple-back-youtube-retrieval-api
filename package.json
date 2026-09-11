@@ -1,0 +1,33 @@
+{
+    "name": "spotify_saver",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "spicetify-creator",
+        "build-local": "spicetify-creator --out=dist --minify",
+        "watch": "spicetify-creator --watch",
+        "bundle": "npx esbuild src/helper_backend/index.mts --bundle --platform=node --target=node22 --outfile=src/helper_backend/dist/index.js",
+        "build:backend": "npx @yao-pkg/pkg src/helper_backend/dist/index.js --targets node22-linux-x64,node22-win-x64,node22-macos-arm64 --out-path ./bin",
+        "run:backend": "node src/helper_backend/run_binary.js",
+        "start": "npm run build && npm run build:backend && concurrently \" npm run run:backend \" \" spicetify apply \"",
+        "pseudo-start": "npm run build && npm run build:backend",
+        "test:watch": "npm run pseudo-start && concurrently \" npm run run:backend \" \" spicetify watch -le --remote-debugging-port=9222 '--remote-allow-origins=*' --user-data-dir=/tmp/spotify-devtools-profile \" "
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@types/react": "^19.2.18",
+        "@types/react-dom": "^19.2.4",
+        "@yao-pkg/pkg": "^6.22.0",
+        "concurrently": "^10.0.5",
+        "spicetify-creator": "^1.0.17",
+        "tsx": "^4.23.13",
+        "typescript": "^7.0.2"
+    },
+    "dependencies": {
+        "@fastify/cors": "^11.3.0",
+        "fastify": "^5.12.3",
+        "progress-estimator": "^0.3.1",
+        "youtube-dl-exec": "^3.1.15",
+        "ytmusic-api": "^5.3.1"
+    }
+}
