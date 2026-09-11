@@ -2,7 +2,7 @@
 
 > Simple YouTube search and download backend API.
 
-WARNING: This project is in early development and may be insecure. Do not run it exposed to the public internet without reviewing the code and securing the host. See the Security section below.
+**WARNING**: This project is in early development and may be insecure. Do not run it exposed to the public internet without reviewing the code and securing the host. See the Security section below.
 
 Table of contents
 
@@ -58,6 +58,8 @@ npm run run:backend
 ```
 
 The backend listens by default on 127.0.0.1:3000 and is configured to allow requests from the XPUI Spotify origin by default.
+
+Also checkout the documentation for [Spicetify](https://spicetify.app/docs/getting-started)
 
 ## Development
 
